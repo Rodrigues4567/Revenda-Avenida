@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: 'padrao';
+    src: url(Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'padrao', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6D0FF2;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 10rem;
+    height: 3px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 3px;
+    background-color: #6D0FF2;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 255px;
+}
+
+.text-boxes {
+    margin-bottom: 10px;
+    padding: 7px 10px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+}
+
+.text-boxes::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.button {
+    padding: 11px 30px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5rem;
+    background-color: #6D0FF2;
+    color: #F2F2F2;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.button:hover {
+    background-color: #6401f0;
+}
+
+.respostas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
