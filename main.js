@@ -11,8 +11,12 @@ button.addEventListener('click', resultado = (e) => {
     let precoInput = document.querySelector('#preco').value;
 
     let ano = classificacao(anoInput);
+    let valorEntrada = entrada(precoInput, ano);
+    let parcela10x = parcelas(precoInput, valorEntrada);
 
     resModelo.innerHTML = `${modeloInput} - ${ano}`;
+    resEntrada.innerHTML = `Entrada R$: ${valorEntrada.toFixed(3)}`;
+    resPreco.innerHTML = `+10x de R$: ${parcela10x.toFixed(3)}`;
 })
 
 function classificacao(ano) {
@@ -33,4 +37,17 @@ function classificacao(ano) {
     }
 
     return resposta;
+}
+
+function entrada(preco, status) {
+    if (status == 'Novo') {
+        return preco * 0.5;
+    }
+    else {
+        return preco * 0.3;
+    }
+}
+
+function parcelas(preco, entrada) {
+    return (preco - entrada) / 10;
 }
